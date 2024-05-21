@@ -14,7 +14,15 @@
 	function getDuration(doj, dor) {
 	 var sdt = new Date(doj);
 	 var difdt = new Date(dor - sdt);
-	 return (difdt.toISOString().slice(0, 4) - 1970) + "yrs " + (difdt.getMonth()+1) + "mos " + difdt.getDate() + "dys";
+	 var yrs = (difdt.toISOString().slice(0, 4) - 1970);
+	 var mos = (difdt.getMonth()+1);
+	 var dys = difdt.getDate();
+	 
+	 if (yrs == '0'){
+		return mos  + " mos";
+	 } else {
+		return  yrs + "yrs " +mos  + "mos";
+	 }
 	}
 	</script>
     <title>CV-Vinay Thakre</title>
@@ -98,7 +106,7 @@
 										        <h3 class="resume-position-title font-weight-bold mb-1">Professional Application Designer</h3>
 												<div class="resume-company-name ml-md-auto mt-2 "><a href="https://www.dxc.technology/" target="_blank"><img style="margin-top:-12px; margin-right:-5px" src="assets/images/dxc_sm_logo.png"></a>DXC Technology</div>
 											</div><!--//row-->
-											<div class="resume-position-time">Sept 2019 - Present - <span id="dxc"></span>										
+											<div class="resume-position-time">Sept 2019 - Present · (<span id="dxc"></span>)									
 											<script>document.querySelector('#dxc').textContent = getDuration('2019-09-16', new Date());</script>
 											</div>
 											<div class="resume-position-time">Tokyo, Japan</div>
@@ -150,7 +158,7 @@
 										        <h3 class="resume-position-title font-weight-bold mb-1">Sr. Software Engineer</h3>
 												<div class="resume-company-name ml-md-auto mt-2"><a href="http://www.fideltech.com/" target="_blank"><img style="margin-top:-15px; margin-right:3px" src="assets/images/fidel_logo.png"></a>Fidel Technologies</div>
 											</div><!--//row-->
-											<div class="resume-position-time">Sept 2016 - July 2019 - <span id="fidel"></span>
+											<div class="resume-position-time">Sept 2016 - July 2019 · (<span id="fidel"></span>)
 											<script>document.querySelector('#fidel').textContent = getDuration('2016-09-01', new Date('2019-07-31'));</script>
 											</div>
 											<div class="resume-position-time">Tokyo, Japan</div>
@@ -196,7 +204,7 @@
 										        <h3 class="resume-position-title font-weight-bold mb-1">Software Engineer</h3>
 										        <div class="resume-company-name ml-md-auto mt-2"><a href="http://www.ivitesse.com/" target="_blank"><img style="margin-top:-12px; margin-right:10px" src="assets/images/ivi_logo.png"></a>Ivitesse Technologies</div>
 										    </div><!--//row-->
-											<div class="resume-position-time">Feb 2016 - Aug 2016 - <span id="ivi"></span>
+											<div class="resume-position-time">Feb 2016 - Aug 2016 · (<span id="ivi"></span>)
 											<script>document.querySelector('#ivi').textContent = getDuration('2016-02-12', new Date('2016-08-31'));</script>
 											</div>
 											<div class="resume-position-time">Tokyo, Japan</div>
@@ -241,7 +249,7 @@
 										        <h3 class="resume-position-title font-weight-bold mb-1">Programmer Analyst</h3>
 												<div class="resume-company-name ml-md-auto mt-2"><a href="http://www.objectseek.com" target="_blank"><img style="margin-top:-12px; margin-right:-5px" src="assets/images/ost_logo.png"></a>Objectseek Technologies</div>
 										    </div><!--//row-->
-											<div class="resume-position-time">Aug 2014 - Oct 2015 - <span id="ost"></span>
+											<div class="resume-position-time">Aug 2014 - Oct 2015 · (<span id="ost"></span>)
 											<script>document.querySelector('#ost').textContent = getDuration('2014-08-11', new Date('2015-10-16'));</script>
 											</div>
 											<div class="resume-position-time">Nagpur, India</div>
@@ -284,7 +292,7 @@
 										        <h3 class="resume-position-title font-weight-bold mb-1">Software Engineer</h3>
 										        <div class="resume-company-name ml-md-auto mt-2"><a href="https://axiomtechguru.com/" target="_blank"><img style="margin-top:-15px; margin-right:3px" src="assets/images/axiom_logo.png"></a>Axiom Softech Pvt. Ltd.</div>
 										    </div><!--//row-->
-											<div class="resume-position-time">Jan 2013 - Aug 2014 - <span id="axm"></span>
+											<div class="resume-position-time">Jan 2013 - Aug 2014 · (<span id="axm"></span>)
 											<script>document.querySelector('#axm').textContent = getDuration('2013-01-01', new Date('2014-08-01'));</script>
 											</div>
 											<div class="resume-position-time">Nagpur, India</div>
