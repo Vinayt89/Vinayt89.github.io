@@ -17,6 +17,12 @@
 	 var yrs = (difdt.toISOString().slice(0, 4) - 1970);
 	 var mos = (difdt.getMonth()+1);
 	 var dys = difdt.getDate();
+
+	if(mos == '12') {
+		mos = '0';
+		yrs++;
+	}
+	
 	 
 	 if (yrs == '0'){
 		return mos  + " mos";
